@@ -7,6 +7,12 @@ public class PatrullaCiclica : AIProfile
     public Transform[] waypoints;
     private int currentWaypointIndex = 0;
 
+    private void Update()
+    {
+        DetectPlayer();
+        ExecuteProfile();
+    }
+
     public override void ExecuteProfile()
     {
         // Moverse hacia el siguiente punto de patrulla

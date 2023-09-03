@@ -4,7 +4,7 @@ using UnityEngine;
 
 public abstract class AIProfile : MonoBehaviour
 {
-    public float viewDistance;
+    public float viewDistance = 3.0f;
     public float waitForTurn;
     public Transform player; // Objeto que actúa como el jugador (para simular la detección)
 
