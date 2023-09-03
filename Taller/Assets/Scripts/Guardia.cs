@@ -7,9 +7,14 @@ public class Guardia : AIProfile
     private float nextTurnTime;
     private Quaternion targetRotation;
 
+    private void Update()
+    {
+        DetectPlayer();
+        ExecuteProfile();
+    }
     private void Start()
     {
-        targetRotation = Quaternion.Euler(0, Random.Range(0, 360), 0);
+        targetRotation = Quaternion.Euler(0, 0, Random.Range(0, 360));
     }
 
     public override void ExecuteProfile()

@@ -8,6 +8,11 @@ public class PatrullaPingPong : AIProfile
     private int currentWaypointIndex = 0;
     private int direction = 1; // 1 para avanzar, -1 para retroceder
 
+    private void Update()
+    {
+        DetectPlayer();
+        ExecuteProfile();
+    }
     public override void ExecuteProfile()
     {
         // Moverse hacia el siguiente punto de patrulla
